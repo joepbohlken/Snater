@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "S1wEkCL1YUhfvm2dkY+HhOzScy4XEGiMwpEQrsqGTsY=",
+  "Source": "Snater.Ocelot_API_Gateway",
+  "BasePath": "_content/Snater.Ocelot_API_Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -4,13 +4,40 @@
 //////////////////////////////////////General////////////////////////////////////////////////
 *{
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
     color: white;
     box-sizing: border-box;
+    scrollbar-width: thin;
+}
+
+// Chrome scrollbar style
+* ::-webkit-scrollbar{
+width: 15px;
+}
+
+* ::-webkit-scrollbar-track{
+    background-color: #27282D;
+}
+
+* ::-webkit-scrollbar-thumb{
+    background-color: #7B7C7F;
+    border-radius: 20px;
+    border: 3px solid #27282D;
+}
+
+body{
+    overflow: hidden;
+    max-height: 100vh;
 }
 
 .leftSelectContainer{
-    max-width: 400px;
-    
+    max-width: 250px;
+    background-color: #2F3136;
+    height: 100vh;
+    max-height: 100vh;
+    flex-direction: column;
+    display: flex;
 }
 
 input[type=text]{
@@ -24,6 +51,16 @@ input[type=text]{
     width: 100%;
 }
 
+button{
+    position: relative;
+    background-color: #2F3136;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
 hr{
     border-top: 1px solid;
     border-radius: 3px;
@@ -33,22 +70,30 @@ hr{
 
 ///////////////////////////////////////////ProfileContainer///////////////////////////////////
 .profileContainer{
+    background-color: #292B2F;
     display: flex;
     align-items: center;
-}
 
-.userProfilePicture{
-    max-width: 50px;
+
+}
+.profilePicture{
+    cursor: pointer;
+    max-width: 40px;
     margin: 8px;
 
     img{
-        width: 50px;
+        min-width: 40px;
+        min-height: 40px;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
         border-radius: 50%;
         background-color: white;
     }
 }
 
 .usernameText{
+    cursor: pointer;
     margin-right: 8px;
     margin-left: 8px;
     flex-grow: 1;
@@ -67,7 +112,8 @@ hr{
 }
 
 .settingsIcon{
-    font-size: 1.4em;
+    cursor: pointer;
+    font-size: 1.2em;
     margin-right: 18px;
 }
 
@@ -88,3 +134,61 @@ hr{
         color: white;
     }
 }
+
+///////////////////////////////////////////////////friendsContainer
+
+
+
+.friendButton{
+    height: 40px;
+    text-align: left;
+    padding-left: 55px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    &::before{
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        z-index: 5;
+        content: "\f500";
+        font: var(--fa-font-solid);
+        color: white;
+    }
+}
+
+///////////////////////////////////////////////openChatContainer//////////////////////////////
+.openChatContainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.openChatButton{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.userProfilePicture{
+    max-width: 30px;
+    margin: 8px;
+
+    img{
+        min-width: 30px;
+        min-height: 30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+    }
+}
+
+.userStatus{
+    color: gray;
+    font-size: small;
+}
+

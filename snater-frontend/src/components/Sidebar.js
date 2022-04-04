@@ -61,7 +61,7 @@ function OpenChatContainer() {
               <p className="username">{chat.username}</p>
             </div>
             <div>
-              <p className="userStatus">{chats.lastMessage}</p>
+              <p className="userStatus">{chat.lastMessage}</p>
             </div>
           </div>
         </div>

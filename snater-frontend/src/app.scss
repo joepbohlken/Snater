@@ -31,6 +31,7 @@ body {
 }
 
 .leftSelectContainer {
+  float: left;
   max-width: 250px;
   background-color: #2f3136;
   height: 100vh;
@@ -184,4 +185,12 @@ hr {
 .userStatus {
   color: gray;
   font-size: small;
+}
+
+/////////////////////////////////////////PageContentContainer//////////////////////////
+.pageContentContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
 }

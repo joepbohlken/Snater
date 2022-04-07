@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PageContent() {
+export default function FriendsContent() {
   return (
     <div className="pageContentContainer">
       <h2>test</h2>

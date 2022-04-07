@@ -2,13 +2,13 @@ import React from "react";
 import "./app.scss";
 
 import Sidebar from "./components/Sidebar";
-import PageContent from "./components/PageContent";
+import FriendsContent from "./components/FriendsContent";
 
 function App() {
   return (
     <div>
       <Sidebar />
-      <PageContent />
+      <FriendsContent />
     </div>
   );
 }

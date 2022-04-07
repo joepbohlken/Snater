@@ -32,7 +32,7 @@ body {
 
 .leftSelectContainer {
   float: left;
-  max-width: 250px;
+  width: 250px;
   background-color: #2f3136;
   height: 100vh;
   max-height: 100vh;
@@ -67,6 +67,29 @@ hr {
   color: gray;
 }
 
+/////////////////////////////////////////////UserStatus/////////////////////////////////////////////////
+
+.userStatus{
+  position: absolute;
+  bottom: 4px;
+  right: 2px;
+  z-index: 10;
+  height: 10px;
+  width: 10px;
+  background-color: #808080;
+  outline: 2px solid #2F3136;
+  outline-color: #2F3136;
+  border-radius: 50%;
+  display: inline-block;
+  &.online{
+    background-color: green;
+  }
+  &.dontDisturb{
+    background-color: #BD3D41;
+  }
+}
+
+
 ///////////////////////////////////////////ProfileContainer///////////////////////////////////
 .profileContainer {
   background-color: #292b2f;
@@ -75,6 +98,7 @@ hr {
 }
 .profilePicture {
   cursor: pointer;
+  position: relative;
   max-width: 40px;
   margin: 8px;
 
@@ -132,7 +156,7 @@ hr {
   }
 }
 
-///////////////////////////////////////////////////friendsContainer
+///////////////////////////////////////////////////friendsContainer///////////////////////////////
 
 .friendButton {
   height: 40px;
@@ -160,15 +184,18 @@ hr {
   flex-direction: column;
   flex-grow: 1;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .openChatButton {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
 .userProfilePicture {
+  position: relative;
   max-width: 30px;
   margin: 8px;
 
@@ -182,15 +209,29 @@ hr {
   }
 }
 
-.userStatus {
+.userLastMessage {
+  width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: gray;
   font-size: small;
 }
 
+.userLastMessageTime{
+  position: absolute;
+  color: gray ;
+  font-size: x-small;
+  right: 8px;
+  top:8px
+}
+
 /////////////////////////////////////////PageContentContainer//////////////////////////
+
 .pageContentContainer {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   overflow-y: auto;
+  overflow-x: hidden;
 }

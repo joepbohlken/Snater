@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pIo0XNcrw29npR8Os+auh/lvk+CznVmMIfIq2P9NvUCceB1TAnOo3kneZsUb6sX835IrC+ItJqBzGM0Hz/2Gsw==",
+  "dgSpecHash": "8pXZ3WL2rDpCNSqvHnaPXWmD23SEUub3q3PVGwg9YlCWxXl8uudi73lJbOFBswujWSFa69pQDnnj5OaxByVdlw==",
   "success": true,
-  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\Snater.Ocelot_API_Gateway\\Snater.Ocelot_API_Gateway.csproj",
+  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Ocelot_API_Gateway\\Snater.Ocelot_API_Gateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.3\\microsoft.aspnetcore.authentication.jwtbearer.6.0.3.nupkg.sha512",

@@ -76,13 +76,16 @@ hr {
   z-index: 10;
   height: 10px;
   width: 10px;
-  background-color: #808080;
+  // background-color: #808080;
   outline: 2px solid #2F3136;
   outline-color: #2F3136;
   border-radius: 50%;
   display: inline-block;
   &.online{
     background-color: green;
+  }
+  &.away{
+    background-color: #FAA81A;
   }
   &.dontDisturb{
     background-color: #BD3D41;

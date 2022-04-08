@@ -24,6 +24,12 @@ builder.Services.AddOcelot();
 
 var app = builder.Build();
 
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowCredentials());
+
 app.UseOcelot();
 
 app.UseHttpsRedirection();

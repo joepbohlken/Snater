@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\ProfileService\\ProfileService.csproj": {}
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\ProfileService\\ProfileService.csproj": {}
   },
   "projects": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\ProfileService\\ProfileService.csproj": {
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\ProfileService\\ProfileService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\ProfileService\\ProfileService.csproj",
+        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\ProfileService\\ProfileService.csproj",
         "projectName": "ProfileService",
-        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\ProfileService\\ProfileService.csproj",
+        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\ProfileService\\ProfileService.csproj",
         "packagesPath": "C:\\Users\\Joep Bohlken\\.nuget\\packages\\",
-        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\ProfileService\\obj\\",
+        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\ProfileService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\FriendService\\FriendService.csproj": {}
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendService\\FriendService.csproj": {}
   },
   "projects": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\FriendService\\FriendService.csproj": {
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendService\\FriendService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\FriendService\\FriendService.csproj",
+        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendService\\FriendService.csproj",
         "projectName": "FriendService",
-        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\FriendService\\FriendService.csproj",
+        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendService\\FriendService.csproj",
         "packagesPath": "C:\\Users\\Joep Bohlken\\.nuget\\packages\\",
-        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\FriendService\\obj\\",
+        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

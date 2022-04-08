@@ -1,0 +1,13 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProfileService.Entity
+{
+    public class Chat
+    {
+        [Key]
+        public Guid Id { get; set; }
+        public User User { get; set; }
+        public string? LastMessage { get; set; }
+        public DateTime LastMessageTime { get; set; }
+    }
+}

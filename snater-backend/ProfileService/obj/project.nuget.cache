@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ciknFt6CNM4zjgKuZAh0dbYWGdnJBDhtsPSqKaePoZLCiWNsoqZHVWvbcN7cIQNIuLHYeGCqKCc1XsleKLqU0Q==",
+  "dgSpecHash": "go6tqzNyvA9x071QI7paAhP/3ZypSAycm7rCukw4hsPLF1tF0PsvZFzqkHbTJCrPxX4Fpyk0kpsxyZPAWUX8Dg==",
   "success": true,
-  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\Snater\\ProfileService\\ProfileService.csproj",
+  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\ProfileService\\ProfileService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

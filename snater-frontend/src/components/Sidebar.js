@@ -1,4 +1,6 @@
-import React from "react";
+import axios from "axios";
+import moment from "moment";
+import React, { useEffect, useState } from "react";
 
 export default function LeftSelectContainer() {
   return (
@@ -64,26 +66,35 @@ export default function LeftSelectContainer() {
   }
 
   function OpenChatContainer() {
-    const chats = [
-      {
-        username: "henk",
-        lastMessage: "hello how is your day",
-        lastMessageTime: "13:06",
-        userStatus: "online",
-      },
-      {
-        username: "pieter",
-        lastMessage: "Wat ga jij vandaag doen?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        lastMessageTime: "12:17",
-        userStatus: "offline",
-      },
-      {
-        username: "yuran",
-        lastMessage: "Gefelicteerd Joep",
-        lastMessageTime: "12:08",
-        status: "dontDisturb",
-      },
-    ];
+    const [chats, setChats] = useState([]);
+
+    async function GetChats() {
+      return await axios
+        .get("https://localhost:5020/api/User")
+        .then((response) => {
+          console.log(response);
+
+          setChats(response.data);
+        });
+    }
+    useEffect(() => {
+      GetChats();
+    }, []);
+
+    function getStatus(status) {
+      switch (status) {
+        case 0:
+          return "offline";
+        case 1:
+          return "online";
+        case 2:
+          return "away";
+        case 3:
+          return "dontDisturb";
+        default:
+          return "";
+      }
+    }
     return (
       <div className="openChatContainer">
         {chats.map((chat) => (
@@ -93,17 +104,19 @@ export default function LeftSelectContainer() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png"
                 alt="UserProfile"
               ></img>
-              <div className={`userStatus ${chat.userStatus}`} />
+              <div className={`userStatus ${getStatus(chat.user.status)}`} />
             </div>
             <div className="usernameText">
               <div>
-                <p className="username">{chat.username}</p>
+                <p className="username">{chat.user.username}</p>
               </div>
               <div>
                 <p className="userLastMessage">{chat.lastMessage}</p>
               </div>
               <div>
-                <p className="userLastMessageTime">{chat.lastMessageTime}</p>
+                <p className="userLastMessageTime">
+                  {moment(chat.lastMessageTime).format("HH:m")}
+                </p>
               </div>
             </div>
           </div>
@@ -112,3 +125,24 @@ export default function LeftSelectContainer() {
     );
   }
 }
+
+// const chats = [
+//   {
+//     username: "henk",
+//     lastMessage: "hello how is your day",
+//     lastMessageTime: "13:06",
+//     userStatus: "online",
+//   },
+//   {
+//     username: "pieter",
+//     lastMessage: "Wat ga jij vandaag doen?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+//     lastMessageTime: "12:17",
+//     userStatus: "offline",
+//   },
+//   {
+//     username: "yuran",
+//     lastMessage: "Gefelicteerd Joep",
+//     lastMessageTime: "12:08",
+//     userStatus: "dontDisturb",
+//   },
+// ];

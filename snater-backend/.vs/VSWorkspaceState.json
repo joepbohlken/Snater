@@ -4,9 +4,11 @@
     "\\FriendService",
     "\\FriendService\\Properties",
     "\\ProfileService",
+    "\\ProfileService\\Controllers",
     "\\ProfileService\\Properties",
     "\\Snater.Ocelot_API_Gateway",
     "\\Snater.Ocelot_API_Gateway\\Properties"
   ],
+  "SelectedNode": "\\ProfileService\\ProfileService.csproj",
   "PreviewInSolutionExplorer": false
 }

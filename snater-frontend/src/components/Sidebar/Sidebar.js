@@ -43,7 +43,7 @@ export default function LeftSelectContainer() {
         .then((response) => {
           console.log(response);
 
-          setChats(response.data);
+          setChats(response.data.chats);
         });
     }
     useEffect(() => {

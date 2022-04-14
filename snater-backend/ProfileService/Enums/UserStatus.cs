@@ -1,4 +1,4 @@
-﻿namespace ProfileService.Enums
+﻿namespace Snater.Services.Profile.Enums
 {
     public enum UserStatus
     {

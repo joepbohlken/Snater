@@ -1,4 +1,4 @@
-namespace ProfileService
+namespace Snater.Services.Profile
 {
     public class WeatherForecast
     {

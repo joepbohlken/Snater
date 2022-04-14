@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "wgqH8+RngEr5CNuvFe40HpZVia7iY0pfN6XBEcYL8sQ=",
-  "Source": "ProfileService",
-  "BasePath": "_content/ProfileService",
+  "Hash": "32uiVPl3pYOA1NA3eCPTxatNj1RcMROfssdjd2UC/Zs=",
+  "Source": "Snater.Services.Profile",
+  "BasePath": "_content/Snater.Services.Profile",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

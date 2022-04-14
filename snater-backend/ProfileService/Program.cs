@@ -1,4 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using Snater.Services.Profile.Data;
+using Snater.Services.Profile.Data.Interfaces;
+using Snater.Services.Profile.Services;
+using Snater.Services.Profile.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddScoped<IProfileService, ProfileService>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+
+builder.Services.AddDbContext<ProfileContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DockerDB")));
 
 // Add services to the container.
 builder.Services.AddCors(options =>

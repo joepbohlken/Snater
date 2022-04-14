@@ -10,4 +10,4 @@ services:
       - ~/apps/mssql/data:/var/lib/mssql/data
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=joep
+      - SA_PASSWORD=JoepBohlken1234!

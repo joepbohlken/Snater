@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProfileService.Entity
+namespace Snater.Services.Profile.Models
 {
     public class Chat
     {

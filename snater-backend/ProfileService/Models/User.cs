@@ -1,15 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using ProfileService.Enums;
+using Snater.Services.Profile.Enums;
 
-namespace ProfileService.Entity
+namespace Snater.Services.Profile.Models
 {
-
-
     public class User
     {
         [Key]
         public Guid Id { get; set; }
         public string? Username { get; set; }
-        public  UserStatus Status {get;set;}
+        public UserStatus Status { get; set; }
     }
 }

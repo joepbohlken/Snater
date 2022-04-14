@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Snater.Services.Profile;
 
-namespace ProfileService.Controllers
+namespace Snater.Services.Profile.Controllers
 {
     [ApiController]
     [Route("[controller]")]

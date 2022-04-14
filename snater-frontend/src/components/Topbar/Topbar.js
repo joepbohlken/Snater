@@ -3,10 +3,10 @@ import "./topbar.scss";
 
 export default function Topbar() {
   return (
-    <div>
+    <div className="topbarContainer">
       <ProfileContainer />
       <FriendOptionsContainer />
-      <hr />
+      {/* <hr /> */}
     </div>
   );
 }
@@ -43,26 +43,24 @@ function ProfileContainer() {
 
 function FriendOptionsContainer() {
   return (
-    <div className="pageContentContainer">
-      <div className="friendOptionsContainer">
-        <div>
-          <p>Friends</p>
-        </div>
-        <div>
-          <p>Friends</p>
-        </div>
-        <div>
-          <p>Friends</p>
-        </div>
-        <div>
-          <p>Friends</p>
-        </div>
-        <div>
-          <p>Friends</p>
-        </div>
-        <div>
-          <input type="button"></input>
-        </div>
+    <div className="friendOptionsContainer">
+      <div>
+        <p>Friends</p>
+      </div>
+      <div>
+        <p>Online</p>
+      </div>
+      <div>
+        <p>All</p>
+      </div>
+      <div>
+        <p>Pending</p>
+      </div>
+      <div>
+        <p>Blocked</p>
+      </div>
+      <div>
+        <button type="button">Add Friend</button>
       </div>
     </div>
   );

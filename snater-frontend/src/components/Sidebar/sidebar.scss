@@ -1,0 +1,95 @@
+/* ========================================================================================
+searchbarContainer
+=========================================================================================== */
+
+.searchbarContainer {
+    position: relative;
+    padding: 8px;
+  
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      z-index: 5;
+      content: "\f002";
+      font: var(--fa-font-solid);
+      color: white;
+    }
+  }
+
+
+  /* ========================================================================================
+friendContainer
+=========================================================================================== */
+
+.friendButton {
+    height: 40px;
+    text-align: left;
+    padding-left: 55px;
+    font-weight: bold;
+  
+    cursor: pointer;
+  
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      z-index: 5;
+      content: "\f500";
+      font: var(--fa-font-solid);
+      color: white;
+    }
+  }
+
+  /* ========================================================================================
+openChatContainer
+=========================================================================================== */
+
+.openChatContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .openChatButton {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .userProfilePicture {
+    position: relative;
+    max-width: 30px;
+    margin: 8px;
+  
+    img {
+      min-width: 30px;
+      min-height: 30px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+  
+  .userLastMessage {
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: gray;
+    font-size: small;
+  }
+  
+  .userLastMessageTime{
+    position: absolute;
+    color: gray ;
+    font-size: x-small;
+    right: 8px;
+    top:8px
+  }

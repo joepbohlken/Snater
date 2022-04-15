@@ -12,6 +12,9 @@ namespace Snater.Services.Profile.Data
         {
             _profileContext = profileContext;
         }
+
+
+
         public async Task<List<Chat>> GetChats(Guid userId)
         {
             var retrievedChats = await _profileContext.Chats.Include(u => u.User).Where(c => c.User.Id == userId).ToListAsync();

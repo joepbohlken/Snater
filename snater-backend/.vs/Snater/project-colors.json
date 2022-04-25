@@ -20,7 +20,12 @@
       "ProjectGuid": "cd289545-955b-4370-a925-c2932c87c701",
       "DisplayName": "FriendService",
       "ColorIndex": 2
+    },
+    "25bb2c04-475c-44fb-b094-a6e1176b3635": {
+      "ProjectGuid": "25bb2c04-475c-44fb-b094-a6e1176b3635",
+      "DisplayName": "Snater.Services.Chat",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

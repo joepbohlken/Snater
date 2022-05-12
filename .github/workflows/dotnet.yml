@@ -22,14 +22,14 @@ jobs:
     - name: Restore dependencies Snater.Service.Chat
       run: dotnet restore snater-backend/Snater.Services.Chat
     - name: Build Snater.Service.Chat
-      run: dotnet restore snater-backend/Snater.Services.Chat
+      run: dotnet build snater-backend/Snater.Services.Chat --no-restore
     # - name: Test Snater.Srvice.Chat
-    #   run: dotnet restore snater-backend/Snater.Services.Chat
+    #   run: dotnet test snater-backend/Snater.Services.Chat
 
     # Snater.Ocelot_API_Gateway
     - name: Restore dependencies Snater.Ocelot_API_Gateway
       run: dotnet restore snater-backend/Snater.Ocelot_API_Gateway
     - name: Build Snater.Ocelot_API_Gateway
-      run: dotnet restore snater-backend/Snater.Ocelot_API_Gateway
+      run: dotnet build snater-backend/Snater.Ocelot_API_Gateway --no-restore
     # - name: Test Snater.Ocelot_API_Gateway
-    #   run: dotnet restore snater-backend/Snater.Ocelot_API_Gateway
+    #   run: dotnet test snater-backend/Snater.Ocelot_API_Gateway

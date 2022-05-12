@@ -17,9 +17,19 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
+
+    # Snater.Services.Chat
+    - name: Restore dependencies Snater.Service.Chat
       run: dotnet restore snater-backend/Snater.Services.Chat
-    - name: Build
+    - name: Build Snater.Service.Chat
       run: dotnet restore snater-backend/Snater.Services.Chat
-    #- name: Test
-    # run: dotnet restore snater-backend/Snater.Services.Chat
+    # - name: Test Snater.Srvice.Chat
+    #   run: dotnet restore snater-backend/Snater.Services.Chat
+
+    # Snater.Ocelot_API_Gateway
+    - name: Restore dependencies Snater.Ocelot_API_Gateway
+      run: dotnet restore snater-backend/Snater.Ocelot_API_Gateway
+    - name: Build Snater.Ocelot_API_Gateway
+      run: dotnet restore snater-backend/Snater.Ocelot_API_Gateway
+    # - name: Test Snater.Ocelot_API_Gateway
+    #   run: dotnet restore snater-backend/Snater.Ocelot_API_Gateway

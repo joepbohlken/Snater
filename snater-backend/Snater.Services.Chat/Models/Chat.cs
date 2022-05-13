@@ -4,7 +4,7 @@ namespace Snater.Services.Chat.Models
 {
     public class Chat
     {
-        // test
+        // test 2
         [Key]
         public Guid Id { get; set; }
         //public User User { get; set; }

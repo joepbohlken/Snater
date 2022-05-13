@@ -5,14 +5,14 @@ on:
       - "main"
       - "development"
     paths:
-      - "Snater/snater-backend/Snater.Services.Chat/*"
+      - "Snater/snater-backend/Snater.Services.Chat/**"
       - ".github/workflows/Snater.Service.Chat.yml"
   pull_request:
     branches:
       - "main"
       - "development"
     paths:
-      - "Snater/snater-backend/Snater.Services.Chat/*"
+      - "Snater/snater-backend/Snater.Services.Chat/**"
       - ".github/workflows/Snater.Service.Chat.yml"
 
 jobs:

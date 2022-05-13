@@ -35,5 +35,5 @@ jobs:
           sonarProjectName: Snater
           sonarOrganization: joepbohlken
           dotnetBuildArguments: ${{ inputs.project-location }}
-          # dotnetTestArguments: ${{ inputs.test-location }}
-          # sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="${{ inputs.test-location }}/TestResults/**/In/**/coverage.opencover.xml"  -d:sonar.cs.vstest.reportsPaths="${{ inputs.test-location }}/TestResults/*.trx"
+          dotnetTestArguments: ${{ inputs.test-location }}
+          sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="${{ inputs.test-location }}/TestResults/**/In/**/coverage.opencover.xml"  -d:sonar.cs.vstest.reportsPaths="${{ inputs.test-location }}/TestResults/*.trx"

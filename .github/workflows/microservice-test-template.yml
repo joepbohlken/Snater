@@ -1,0 +1,46 @@
+name: microservice test
+
+on:
+  workflow_call:
+    inputs:
+      project-location:
+        required: true
+        type: string
+        description: "Path to projecfiles"
+      test-location:
+        required: false
+        type: string
+        description: "Path to projectfiles"
+    secrets:
+      sonar-token:
+        required: true
+      github-token:
+        required: true
+
+env:
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Setup .Net
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+      
+      # Restore dependencies
+      - name: Restore dependencies "Specific Microservicename"
+        run: dotnet restore ${{ inputs.project-location }}
+      
+      # Build project
+      - name: Build "Specific Microservicename"
+        run: dotnet build ${{ inputs.project-location }} --no-restore
+      
+      # Run tests
+      # - name: Run "Specific Microservicename" Tests
+      #   run: dotnet test ${{ inputs.test-location }}

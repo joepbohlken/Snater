@@ -1,0 +1,39 @@
+name: microservice analyse
+
+on:
+  workflow_call:
+    inputs:
+      project-location:
+        required: true
+        type: string
+        description: "Path to projecfiles"
+      test-location:
+        required: false
+        type: string
+        description: "Path to projectfiles"
+    secrets:
+      sonar-token:
+        required: true
+      github-token:
+        required: true
+
+env:
+  SONAR_TOKEN: ${{ secrets.sonar-token }}
+  GITHUB_TOKEN: ${{ secrets.github-token }}
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Sonarcloud analysis
+      - name: "Run Sonarcloud analysis"
+        uses: highbyte/sonarscan-dotnet@v2.1.2
+        with:
+          sonarProjectKey: joepbohlken_Snater
+          sonarProjectName: Snater
+          sonarOrganization: joepbohlken
+          dotnetBuildArguments: ${{ inputs.project-location }}
+          # dotnetTestArguments: ${{ inputs.test-location }}
+          # sonarBeginArguments: /d:sonar.cs.opencover.reportsPaths="${{ inputs.test-location }}/TestResults/**/In/**/coverage.opencover.xml"  -d:sonar.cs.vstest.reportsPaths="${{ inputs.test-location }}/TestResults/*.trx"

@@ -21,7 +21,6 @@ jobs:
     with:
       project-location: "snater-backend/Snater.Services.Chat"
       # test-location: "tests/FileMicroservice/FileMicroservice.UnitTests"
-      project-name: "ChatService"
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
   chat-analyse:

@@ -6,14 +6,14 @@ on:
       - "development"
     paths:
       - "Snater/snater-backend/Snater.Services.Chat/**"
-      - ".github/workflows/Snater.Service.Chat.yml"
+      - ".github/workflows/snater.service.chat.yml"
   pull_request:
     branches:
       - "main"
       - "development"
     paths:
       - "Snater/snater-backend/Snater.Services.Chat/**"
-      - ".github/workflows/Snater.Service.Chat.yml"
+      - ".github/workflows/Snater.service.chat.yml"
 
 jobs:
   chat-build-unit-testing:

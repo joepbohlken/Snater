@@ -25,7 +25,17 @@
       "ProjectGuid": "25bb2c04-475c-44fb-b094-a6e1176b3635",
       "DisplayName": "Snater.Services.Chat",
       "ColorIndex": 3
+    },
+    "9d3d2d6b-9231-476c-a57b-7300c8caf5a4": {
+      "ProjectGuid": "9d3d2d6b-9231-476c-a57b-7300c8caf5a4",
+      "DisplayName": "Snater.Services.Chat.Test",
+      "ColorIndex": 4
+    },
+    "21cabffd-0b9c-4abf-98ed-9c60d0d2dbf5": {
+      "ProjectGuid": "21cabffd-0b9c-4abf-98ed-9c60d0d2dbf5",
+      "DisplayName": "Snater.Services.Friend",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }

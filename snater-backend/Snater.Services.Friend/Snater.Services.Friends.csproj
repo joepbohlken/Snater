@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Interfaces\" />
+    <Folder Include="Models\DTO\" />
   </ItemGroup>
 
 </Project>

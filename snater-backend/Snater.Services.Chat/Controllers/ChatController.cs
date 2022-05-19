@@ -21,7 +21,7 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpGet]
-        [Route("messages")]
+        [Route("getallchats")]
         public async Task<IActionResult> GetAllChats()
         {
             var result = await _chatRepository.GetAllChats();
@@ -29,7 +29,7 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpGet]
-        [Route("messages")]
+        [Route("getchatbyid/{id}")] 
         public async Task<IActionResult> GetChatMessagesByChatId(Guid chatId)
         {
             var result = await _chatRepository.GetChatById(chatId);
@@ -37,7 +37,7 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpPost]
-        [Route("chat")]
+        [Route("sendmessage")]
         public async Task<IActionResult> SendMessage([FromBody] MessageCreateRequest request)
         {
             var result = await _chatRepository.SendMessage(request);
@@ -45,7 +45,7 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpPost]
-        [Route("chat")]
+        [Route("editmessage")]
         public async Task<IActionResult> EditMessage([FromBody] MessageEditRequest request)
         {
             var result = await _chatRepository.EditMessage(request);
@@ -53,6 +53,7 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpPost]
+        [Route("deletemessge/{id}")]
         public async Task<IActionResult> DeleteMessage(Guid messageId)
         {
             var result = await _chatRepository.DeleteMessage(messageId);

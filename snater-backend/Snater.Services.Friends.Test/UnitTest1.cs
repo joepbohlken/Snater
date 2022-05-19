@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace Snater.Services.Chats.Test
+namespace Snater.Services.Friends.Test
 {
     public class UnitTest1
     {

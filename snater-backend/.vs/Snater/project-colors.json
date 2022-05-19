@@ -28,14 +28,19 @@
     },
     "9d3d2d6b-9231-476c-a57b-7300c8caf5a4": {
       "ProjectGuid": "9d3d2d6b-9231-476c-a57b-7300c8caf5a4",
-      "DisplayName": "Snater.Services.Chat.Test",
+      "DisplayName": "Snater.Services.Chats.Test",
       "ColorIndex": 4
     },
     "21cabffd-0b9c-4abf-98ed-9c60d0d2dbf5": {
       "ProjectGuid": "21cabffd-0b9c-4abf-98ed-9c60d0d2dbf5",
       "DisplayName": "Snater.Services.Friends",
       "ColorIndex": 5
+    },
+    "a3e3840a-8ec3-4f16-86af-b86317ef5ab8": {
+      "ProjectGuid": "a3e3840a-8ec3-4f16-86af-b86317ef5ab8",
+      "DisplayName": "Snater.Services.Friends.Test",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

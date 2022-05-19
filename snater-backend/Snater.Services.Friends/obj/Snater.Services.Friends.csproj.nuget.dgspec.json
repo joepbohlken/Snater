@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friend\\Snater.Services.Friends.csproj": {}
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends\\Snater.Services.Friends.csproj": {}
   },
   "projects": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friend\\Snater.Services.Friends.csproj": {
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends\\Snater.Services.Friends.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friend\\Snater.Services.Friends.csproj",
+        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends\\Snater.Services.Friends.csproj",
         "projectName": "Snater.Services.Friends",
-        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friend\\Snater.Services.Friends.csproj",
+        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends\\Snater.Services.Friends.csproj",
         "packagesPath": "C:\\Users\\Joep Bohlken\\.nuget\\packages\\",
-        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friend\\obj\\",
+        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

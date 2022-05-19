@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SIyk4a4Ak092zkOP6hgyhzeFYnC/kImai/sZPHyv83JT9U7Job6rgoaDB1My0wuiW3XsOIl4ytX9CpBQW8Whzw==",
+  "dgSpecHash": "f+mzBij6DdxSLp2awPuHL67rNjtLWcSibvLUZnPg4FDapza6N3iC32mDjqKSKifr3mljLIO7Z5tumFlnxQqr1Q==",
   "success": true,
-  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendService\\FriendService.csproj",
+  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\FriendsService\\FriendService.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

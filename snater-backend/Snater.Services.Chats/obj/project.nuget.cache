@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SAdy9Rmw7jBtpCRZFMyFtpiuyLafm+LvkcKusukYsqpU2RAAlgTtk2d818sR+9W4Rc+xzhjcgKXbdbI8/1TzpA==",
+  "dgSpecHash": "UYbSYPQNc9o1tdjfr8jl1+FZmxjvsCzR1d9zvZ9Di7Jxfp/JvdNFAi7fPHp/J2XnhzNR3yXs/PClsgpJRTmPAg==",
   "success": true,
-  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat\\Snater.Services.Chats.csproj",
+  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats\\Snater.Services.Chats.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

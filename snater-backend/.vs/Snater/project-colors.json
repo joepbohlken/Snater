@@ -40,7 +40,12 @@
       "ProjectGuid": "a3e3840a-8ec3-4f16-86af-b86317ef5ab8",
       "DisplayName": "Snater.Services.Friends.Test",
       "ColorIndex": 6
+    },
+    "d97f96cb-712d-4679-8cdb-b77088f5eebe": {
+      "ProjectGuid": "d97f96cb-712d-4679-8cdb-b77088f5eebe",
+      "DisplayName": "Snater.Services.Chats",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

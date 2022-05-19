@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat.Test\\Snater.Services.Chats.Test.csproj": {}
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats.Test\\Snater.Services.Chats.Test.csproj": {}
   },
   "projects": {
-    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat.Test\\Snater.Services.Chats.Test.csproj": {
+    "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats.Test\\Snater.Services.Chats.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat.Test\\Snater.Services.Chats.Test.csproj",
+        "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats.Test\\Snater.Services.Chats.Test.csproj",
         "projectName": "Snater.Services.Chats.Test",
-        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat.Test\\Snater.Services.Chats.Test.csproj",
+        "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats.Test\\Snater.Services.Chats.Test.csproj",
         "packagesPath": "C:\\Users\\Joep Bohlken\\.nuget\\packages\\",
-        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat.Test\\obj\\",
+        "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

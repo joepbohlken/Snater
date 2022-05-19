@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pjg+/j7cOCAoBQjrx/7oTHSISGPOINepiO/b2e7ZqgNsf7SA7yjGfAa00nsfoFpLOOcTwnxkK0U7JjwTWzgJzQ==",
+  "dgSpecHash": "oB/6uExbMXuEIjvCtpoFaL7mo6ZxSI23zIGKq12lF6ad4670qyMV5npGwCIhR+NE5eLn0p9EYnUjR8uhRI4r2Q==",
   "success": true,
-  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chat.Test\\Snater.Services.Chats.Test.csproj",
+  "projectFilePath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Chats.Test\\Snater.Services.Chats.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Joep Bohlken\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

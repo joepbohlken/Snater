@@ -6,6 +6,7 @@ namespace Snater.Services.Friends.Controllers
     [ApiController]
     public class FriendController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

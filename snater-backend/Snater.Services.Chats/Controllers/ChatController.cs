@@ -15,6 +15,8 @@ namespace Snater.Services.Chats.Controllers
         {
             _chatRepository = chatRepository;   
         }
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

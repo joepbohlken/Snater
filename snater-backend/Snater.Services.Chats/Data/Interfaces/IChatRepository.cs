@@ -8,6 +8,7 @@ namespace Snater.Services.Chats.Data.Interfaces
     {
         Task<List<Chat>> GetAllChats();
         Task<Chat> GetChatById(Guid chatId);
+        Task<Chat> CreateChat(ChatCreateRequest request);
         Task<Message> SendMessage(MessageCreateRequest request);
         Task<Message> EditMessage(MessageEditRequest request);
         Task<Message> DeleteMessage(Guid messageId);

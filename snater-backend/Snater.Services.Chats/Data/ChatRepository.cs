@@ -24,8 +24,16 @@ namespace Snater.Services.Chats.Data
 
         public async Task<Chat> GetChatById(Guid chatId)
         {
-            var retrievedChat = await _chatContext.Chats.SingleAsync(c => c.ChatId == chatId);
+            var retrievedChat = await _chatContext.Chats.SingleAsync(c => c.Id == chatId);
             return retrievedChat;
+        }
+
+        public async Task<Chat> CreateChat(ChatCreateRequest request)
+        {
+            Chat chatToCreate = request.MapToModel();
+            var chat = await _chatContext.AddAsync(chatToCreate);
+            await _chatContext.SaveChangesAsync();
+            return chat.Entity;
         }
 
         public async Task<Message> SendMessage(MessageCreateRequest request)
@@ -37,8 +45,8 @@ namespace Snater.Services.Chats.Data
         }
         public async Task<Message> EditMessage(MessageEditRequest request)
         {
-            Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.MessageId == request.MessageId);
-            retrievedMessage.MessageContent = request.MessageContent;
+            Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.Id == request.MessageId);
+            retrievedMessage.Content = request.MessageContent;
 
             await _chatContext.SaveChangesAsync();
             return retrievedMessage;
@@ -46,7 +54,7 @@ namespace Snater.Services.Chats.Data
 
         public async Task<Message> DeleteMessage(Guid messageId)
         {
-            Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.MessageId == messageId);
+            Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.Id == messageId);
             _chatContext.Remove(retrievedMessage);
             await _chatContext.SaveChangesAsync();
 

@@ -6,8 +6,11 @@ namespace Snater.Services.Chats.Models
     {
         // test 8
         [Key]
-        public Guid ChatId { get; set; }
-        public List<string> Participants { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public Guid CreatorId { get; set; }
+        public List<Guid> Admins { get; set; }
+        public List<Guid> Participants { get; set; }
         public List<Message> Messages { get; set; }
         public Message LastMessage { get; set; }
         public DateTime LastMessageTime { get; set; }

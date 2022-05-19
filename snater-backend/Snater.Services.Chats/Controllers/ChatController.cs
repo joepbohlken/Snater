@@ -39,6 +39,14 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpPost]
+        [Route("createchat")]
+        public async Task<IActionResult> CreateChat(ChatCreateRequest request)
+        {
+            var result = await _chatRepository.CreateChat(request);
+            return Ok(result);
+        }
+
+        [HttpPost]
         [Route("sendmessage")]
         public async Task<IActionResult> SendMessage([FromBody] MessageCreateRequest request)
         {
@@ -47,7 +55,7 @@ namespace Snater.Services.Chats.Controllers
         }
 
         [HttpPost]
-        [Route("editmessage")]
+        [Route("editmessage/{id}")]
         public async Task<IActionResult> EditMessage([FromBody] MessageEditRequest request)
         {
             var result = await _chatRepository.EditMessage(request);

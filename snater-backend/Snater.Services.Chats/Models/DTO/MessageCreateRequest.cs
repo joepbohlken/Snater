@@ -14,6 +14,9 @@ namespace Snater.Services.Chats.Models.DTO
         [Required]
         public Chat? Chat { get; set; } = null;
 
+        [Required]
+        public Guid Sender { get; set; }
+
         [Required(AllowEmptyStrings = false)]
         public string MessageContent { get; set; }
 
@@ -33,14 +36,15 @@ namespace Snater.Services.Chats.Models.DTO
         {
             return new Message
             {
-                MessageId = MessageId,
+                Id = MessageId,
                 ChatId = ChatId,
                 Chat = Chat,
-                MessageContent = MessageContent,
+                Sender = Sender,
+                Content = MessageContent,
                 SendTime = SendTime,
                 ReceiveTime = ReseiveTime,
                 ReadTime = ReadTime,
-                MessageStatus = MessageStatus,
+                Status = MessageStatus,
             };
         }
     }

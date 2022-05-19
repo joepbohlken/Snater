@@ -38,30 +38,25 @@ namespace Snater.Services.Chats.Controllers
 
         [HttpPost]
         [Route("chat")]
-        public async Task<IActionResult> SendMessage([FromBody] CreateMessageRequest createMessageRequest)
+        public async Task<IActionResult> SendMessage([FromBody] MessageCreateRequest request)
         {
-            Message message =  createMessageRequest.MapToModel();
-            var result = await _chatRepository.SendMessage(message);
+            var result = await _chatRepository.SendMessage(request);
             return Ok(result);
         }
 
         [HttpPost]
         [Route("chat")]
-        public async Task<IActionResult> EditMessage(Guid messageId)
+        public async Task<IActionResult> EditMessage([FromBody] MessageEditRequest request)
         {
-            throw new NotImplementedException();
+            var result = await _chatRepository.EditMessage(request);
+            return Ok(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteMessageForSelf(Guid chatId)
+        public async Task<IActionResult> DeleteMessage(Guid messageId)
         {
-            throw new NotImplementedException();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeleteMessageForBothUsers(Guid chatId)
-        {
-            throw new NotImplementedException();
+            var result = await _chatRepository.DeleteMessage(messageId);
+            return Ok(result);
         }
     }
 }

@@ -3,7 +3,7 @@ using Snater.Services.Chats.Enums;
 
 namespace Snater.Services.Chats.Models.DTO
 {
-    public class CreateMessageRequest
+    public class MessageCreateRequest
     {
         [Required]
         public Guid MessageId = Guid.NewGuid();

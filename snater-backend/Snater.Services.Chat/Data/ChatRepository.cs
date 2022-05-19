@@ -14,6 +14,8 @@ namespace Snater.Services.Chats.Data
         {
             _chatContext = chatContext;
         }
+
+
         public async Task<List<Chat>> GetAllChats()
         {
             var retrievedChats = await _chatContext.Chats.ToListAsync();
@@ -26,11 +28,29 @@ namespace Snater.Services.Chats.Data
             return retrievedChat;
         }
 
-        public async Task<Message> SendMessage(Message request)
+        public async Task<Message> SendMessage(MessageCreateRequest request)
         {
-            var message = await _chatContext.Messages.AddAsync(request);
+            Message messageToSend = request.MapToModel();
+            var message = await _chatContext.Messages.AddAsync(messageToSend);
             await _chatContext.SaveChangesAsync();
             return message.Entity;
+        }
+        public async Task<Message> EditMessage(MessageEditRequest request)
+        {
+            Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.MessageId == request.MessageId);
+            retrievedMessage.MessageContent = request.MessageContent;
+
+            await _chatContext.SaveChangesAsync();
+            return retrievedMessage;
+        }
+
+        public async Task<Message> DeleteMessage(Guid messageId)
+        {
+            Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.MessageId == messageId);
+            _chatContext.Remove(retrievedMessage);
+            await _chatContext.SaveChangesAsync();
+
+            return retrievedMessage;
         }
     }
 }

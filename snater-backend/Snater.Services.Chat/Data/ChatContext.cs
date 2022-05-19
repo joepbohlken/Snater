@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Snater.Services.Chats.Models;
 
 namespace Snater.Services.Chats.Data
@@ -13,12 +12,12 @@ namespace Snater.Services.Chats.Data
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Chat>()
-                .HasRequired<Message>(c => c.Messages)
-                .WithMany(m => m.ChatId)
-                .HasForeignKey<int>(c => c.MessageId)
+            modelBuilder.Entity<Message>()
+                .HasOne(c => c.Chat)
+                .WithMany(m => m.Messages)
+                .HasForeignKey(c => c.ChatId);
         }
     }
 }

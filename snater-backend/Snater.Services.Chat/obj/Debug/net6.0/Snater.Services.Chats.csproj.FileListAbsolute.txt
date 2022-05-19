@@ -1,0 +1,7 @@
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.csproj.AssemblyReference.cache
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.GeneratedMSBuildEditorConfig.editorconfig
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.AssemblyInfoInputs.cache
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.AssemblyInfo.cs
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.csproj.CoreCompileInputs.cache
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.MvcApplicationPartsAssemblyInfo.cs
+H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Chat\obj\Debug\net6.0\Snater.Services.Chats.MvcApplicationPartsAssemblyInfo.cache

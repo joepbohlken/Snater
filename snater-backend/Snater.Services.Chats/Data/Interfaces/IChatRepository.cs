@@ -6,7 +6,7 @@ namespace Snater.Services.Chats.Data.Interfaces
 {
     public interface IChatRepository
     {
-        Task<List<Chat>> GetAllChats();
+        Task<List<Chat>> GetAllChats(Guid userId);
         Task<Chat> GetChatById(Guid chatId);
         Task<Chat> CreateChat(ChatCreateRequest request);
         Task<Message> SendMessage(MessageCreateRequest request);

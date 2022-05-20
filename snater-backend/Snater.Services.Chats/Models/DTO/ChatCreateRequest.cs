@@ -8,27 +8,12 @@ namespace Snater.Services.Chats.Models.DTO
         public Guid Id = Guid.NewGuid();
 
         [Required]
-        public string Name { get; set; } = "Chat";
+        public string Name { get; set; }
 
         [Required]
         public Guid CreatorId { get; set; }
-        
-        [Required]
-        public List<Guid> Admins { get; set; }
 
         [Required]
-        public List<Guid> Participants { get; set; }
-
-        public Chat MapToModel()
-        {
-            return new Chat
-            {
-                Id = Id,
-                Name = Name,
-                CreatorId = CreatorId,
-                Admins = Admins,
-                Participants = Participants,
-            };
-        }
+        public List<Guid> ChatUsers { get; set; }
     }
 }

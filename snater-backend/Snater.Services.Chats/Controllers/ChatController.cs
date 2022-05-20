@@ -24,9 +24,9 @@ namespace Snater.Services.Chats.Controllers
 
         [HttpGet]
         [Route("getallchats")]
-        public async Task<IActionResult> GetAllChats()
+        public async Task<IActionResult> GetAllChats(Guid userId)
         {
-            var result = await _chatRepository.GetAllChats();
+            var result = await _chatRepository.GetAllChats(userId);
             return Ok(result);
         }
 

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mssql-chatdb:
+    image: mcr.microsoft.com/mssql/server:2019-CU16-ubuntu-20.04
+    container_name: mssql-chatdb
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Y!ktUp2k2Hp#2M@
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssqlchatdata:/var/opt/mssql
+volumes:
+  mssqlchatdata:

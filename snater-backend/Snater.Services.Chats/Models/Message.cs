@@ -16,5 +16,10 @@ namespace Snater.Services.Chats.Models
         public DateTime? ReceiveTime { get; set; }
         public DateTime? ReadTime { get; set; }
         public MessageStatus Status { get; set; }
+
+    public Message()
+    {
+
+    }
     }
 }

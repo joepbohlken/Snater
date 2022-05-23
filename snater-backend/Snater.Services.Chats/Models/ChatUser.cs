@@ -10,6 +10,11 @@ namespace Snater.Services.Chats.Models.DTO
         public Guid ChatId { get; set; }
         public Chat? Chat { get; set; } = null;
         public Guid Id { get; }
+
+        public ChatUser()
+        {
+
+        }
         public ChatUser(Guid id, Guid userId)
         {
             Id = id;

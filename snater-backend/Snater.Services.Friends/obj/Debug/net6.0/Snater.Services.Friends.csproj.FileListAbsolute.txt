@@ -25,3 +25,30 @@ H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.F
 H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\ref\Snater.Services.Friends.dll
 H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.pdb
 H:\Git Repository\Semester 6 Individueel\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.genruntimeconfig.cache
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\appsettings.json
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Snater.Services.Friends.exe
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Snater.Services.Friends.deps.json
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Snater.Services.Friends.runtimeconfig.json
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Snater.Services.Friends.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Snater.Services.Friends.pdb
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.csproj.AssemblyReference.cache
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.AssemblyInfoInputs.cache
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.AssemblyInfo.cs
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.csproj.CoreCompileInputs.cache
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\scopedcss\bundle\Snater.Services.Friends.styles.css
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.csproj.CopyComplete
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\refint\Snater.Services.Friends.dll
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.pdb
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\Snater.Services.Friends.genruntimeconfig.cache
+C:\Users\joepb\Documents\GitHub\Snater\snater-backend\Snater.Services.Friends\obj\Debug\net6.0\ref\Snater.Services.Friends.dll

@@ -83,7 +83,6 @@ namespace Snater.Services.Chats.Data
             return retrievedMessage;
         }
 
-//test 3
         public async Task<Message> DeleteMessage(Guid messageId)
         {
             Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.Id == messageId);

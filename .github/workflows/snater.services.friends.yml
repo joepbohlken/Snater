@@ -2,6 +2,7 @@ name: "Friends Service - build, test & analyse"
 on:
   push:
     branches:
+      - "release"
       - "main"
       - "development"
     paths:
@@ -10,6 +11,7 @@ on:
       - "snater-backend/Snater.Services.Friends.Test/**"
   pull_request:
     branches:
+      - "release"
       - "main"
       - "development"
     paths:
@@ -18,11 +20,14 @@ on:
       - "snater-backend/Snater.Services.Friends.Test/**"
 
 jobs:
+  # Tests 
   chat-build-unit-testing:
     uses: "./.github/workflows/microservice-test-template.yml"
     with:
       project-location: "snater-backend/Snater.Services.Friends"
       test-location: "snater-backend/Snater.Services.Friends.Test"
+  
+  # Analysis
   chat-analyse:
     uses: "./.github/workflows/microservice-analyse-template.yml"
     with:
@@ -31,3 +36,14 @@ jobs:
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
       github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  # Docker build-push
+  chat-build-push:
+    uses: "./.github/workflows/microservice-docker-build-push-template.yml"
+    if: github.ref_name == 'release'
+    with:
+      project-name: "snater.services.friends"
+      project-location: "snater-backend/Snater.Services.Friends"
+    secrets:
+      docker-token: ${{ secrets.DOCKER_TOKEN}}
+      docker-username: ${{ secrets.DOCKER_USERNAME}}

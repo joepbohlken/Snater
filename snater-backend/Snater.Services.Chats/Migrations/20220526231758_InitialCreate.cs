@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Snater.Services.Chats.Migrations
 {
-    public partial class temp : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,8 +15,7 @@ namespace Snater.Services.Chats.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    LastMessageTime = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    CreatorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,12 +26,13 @@ namespace Snater.Services.Chats.Migrations
                 name: "ChatUsers",
                 columns: table => new
                 {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ChatId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChatUsers", x => x.UserId);
+                    table.PrimaryKey("PK_ChatUsers", x => x.Id);
                     table.ForeignKey(
                         name: "FK_ChatUsers_Chats_ChatId",
                         column: x => x.ChatId,
@@ -52,8 +52,7 @@ namespace Snater.Services.Chats.Migrations
                     SendTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ReceiveTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ReadTime = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    ChatId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,11 +63,6 @@ namespace Snater.Services.Chats.Migrations
                         principalTable: "Chats",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Messages_Chats_ChatId1",
-                        column: x => x.ChatId1,
-                        principalTable: "Chats",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -80,13 +74,6 @@ namespace Snater.Services.Chats.Migrations
                 name: "IX_Messages_ChatId",
                 table: "Messages",
                 column: "ChatId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Messages_ChatId1",
-                table: "Messages",
-                column: "ChatId1",
-                unique: true,
-                filter: "[ChatId1] IS NOT NULL");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -31,9 +31,6 @@ namespace Snater.Services.Chats.Migrations
                     b.Property<Guid>("CreatorId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastMessageTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -45,14 +42,17 @@ namespace Snater.Services.Chats.Migrations
 
             modelBuilder.Entity("Snater.Services.Chats.Models.DTO.ChatUser", b =>
                 {
-                    b.Property<Guid>("UserId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("ChatId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("UserId");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("ChatId");
 
@@ -66,9 +66,6 @@ namespace Snater.Services.Chats.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("ChatId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("ChatId1")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
@@ -94,10 +91,6 @@ namespace Snater.Services.Chats.Migrations
 
                     b.HasIndex("ChatId");
 
-                    b.HasIndex("ChatId1")
-                        .IsUnique()
-                        .HasFilter("[ChatId1] IS NOT NULL");
-
                     b.ToTable("Messages");
                 });
 
@@ -120,18 +113,12 @@ namespace Snater.Services.Chats.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Snater.Services.Chats.Models.Chat", null)
-                        .WithOne("LastMessage")
-                        .HasForeignKey("Snater.Services.Chats.Models.Message", "ChatId1");
-
                     b.Navigation("Chat");
                 });
 
             modelBuilder.Entity("Snater.Services.Chats.Models.Chat", b =>
                 {
                     b.Navigation("ChatUsers");
-
-                    b.Navigation("LastMessage");
 
                     b.Navigation("Messages");
                 });

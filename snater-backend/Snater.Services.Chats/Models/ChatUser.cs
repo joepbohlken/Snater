@@ -6,18 +6,18 @@ namespace Snater.Services.Chats.Models.DTO
     {
 
         [Key]
+        public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ChatId { get; set; }
         public Chat? Chat { get; set; } = null;
-        public Guid Id { get; }
 
         public ChatUser()
         {
 
         }
-        public ChatUser(Guid id, Guid userId)
+        public ChatUser(Guid chatId, Guid userId)
         {
-            Id = id;
+            ChatId = chatId;
             UserId = userId;
         }
     }

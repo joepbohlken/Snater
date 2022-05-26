@@ -14,16 +14,11 @@ namespace Snater.Services.Chats.Data
         {
 
         }
-        public ChatContext()
-        {
-
-        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Message>()
-                .HasOne(c => c.Chat)
-                .WithMany(m => m.Messages)
-                .HasForeignKey(c => c.ChatId);
+            modelBuilder.Entity<Chat>()
+                .HasMany(m => m.Messages)
+                .WithOne(c => c.Chat);
 
             modelBuilder.Entity<ChatUser>()
                 .HasOne(c => c.Chat)

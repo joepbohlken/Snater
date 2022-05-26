@@ -5,9 +5,6 @@ namespace Snater.Services.Chats.Models.DTO
     public class ChatCreateRequest
     {
         [Required]
-        public Guid Id = Guid.NewGuid();
-
-        [Required]
         public string Name { get; set; }
 
         [Required]

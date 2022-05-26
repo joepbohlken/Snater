@@ -47,16 +47,17 @@ namespace Snater.Services.Chats.Data
             //return chat;
 
 
-            List<ChatUser> chatUsers = new List<ChatUser>();
-            foreach (Guid userId in request.ChatUsers)
-            {
-                ChatUser chatUser = new ChatUser(request.Id, userId);
-                chatUsers.Add(chatUser);
-            }
 
-            Chat chatToCreate = new Chat(request.Id, request.Name, request.CreatorId, chatUsers);
+            Chat chatToCreate = new Chat(request.Name, request.CreatorId);
 
             var chat = await _chatContext.AddAsync(chatToCreate);
+            List<ChatUser> chatUsers = new List<ChatUser>();
+
+            foreach (Guid userId in request.ChatUsers)
+            {
+                ChatUser chatUser = new ChatUser(chatToCreate.Id, userId);
+                chatUsers.Add(chatUser);
+            }
             await _chatContext.AddRangeAsync(chatUsers);
             //foreach (ChatUser user in chatUsers)
             //{

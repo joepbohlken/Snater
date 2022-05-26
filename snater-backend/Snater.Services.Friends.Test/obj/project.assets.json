@@ -5973,27 +5973,36 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joepb\\.nuget\\packages\\": {}
+    "C:\\Users\\Joep Bohlken\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joepb\\Documents\\GitHub\\Snater\\snater-backend\\Snater.Services.Friends.Test\\Snater.Services.Friends.Test.csproj",
+      "projectUniqueName": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends.Test\\Snater.Services.Friends.Test.csproj",
       "projectName": "Snater.Services.Friends.Test",
-      "projectPath": "C:\\Users\\joepb\\Documents\\GitHub\\Snater\\snater-backend\\Snater.Services.Friends.Test\\Snater.Services.Friends.Test.csproj",
-      "packagesPath": "C:\\Users\\joepb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joepb\\Documents\\GitHub\\Snater\\snater-backend\\Snater.Services.Friends.Test\\obj\\",
+      "projectPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends.Test\\Snater.Services.Friends.Test.csproj",
+      "packagesPath": "C:\\Users\\Joep Bohlken\\.nuget\\packages\\",
+      "outputPath": "H:\\Git Repository\\Semester 6 Individueel\\Snater\\snater-backend\\Snater.Services.Friends.Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\joepb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Joep Bohlken\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/discord-net/api/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -6047,7 +6056,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

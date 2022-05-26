@@ -18,11 +18,14 @@ on:
       - "snater-backend/Snater.Services.Chats.Test/**"
 
 jobs:
+  # Tests
   chat-build-unit-testing:
     uses: "./.github/workflows/microservice-test-template.yml"
     with:
       project-location: "snater-backend/Snater.Services.Chats"
       test-location: "snater-backend/Snater.Services.Chats.Test"
+
+  # Sonarcloud analyses
   chat-analyse:
     uses: "./.github/workflows/microservice-analyse-template.yml"
     with:
@@ -31,3 +34,14 @@ jobs:
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
       github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+  # Docker build-push
+  chat-build-push:
+    uses: "./.github/workflows/microservice-docker-build-push-template.yml"
+    if: github.ref_name == "release"
+    with:
+      project-name: "Snater.Services.Chat"
+      project-location: "snater-backend/Snater.Services.Chats"
+    secrets:
+      docker-token: ${{ secrets.DOCKER_TOKEN}}
+      docker-username: ${{ secrets.DOCKER_USERNAME}}

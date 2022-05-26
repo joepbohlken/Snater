@@ -34,13 +34,13 @@ jobs:
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
       github-token: ${{ secrets.GITHUB_TOKEN }}
-      
+
   # Docker build-push
   chat-build-push:
     uses: "./.github/workflows/microservice-docker-build-push-template.yml"
-    if: github.ref_name == "release"
+    if: github.ref_name == 'release'
     with:
-      project-name: "Snater.Services.Chat"
+      project-name: "snater.services.chat"
       project-location: "snater-backend/Snater.Services.Chats"
     secrets:
       docker-token: ${{ secrets.DOCKER_TOKEN}}

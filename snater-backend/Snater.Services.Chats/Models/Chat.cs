@@ -11,9 +11,8 @@ namespace Snater.Services.Chats.Models
         public string Name { get; set; }
         public Guid CreatorId { get; set; }
         public List<ChatUser> ChatUsers { get; set; } = new List<ChatUser>();
-        public List<Message>? Messages { get; set; } = new List<Message>();
+        public List<Message> Messages { get; set; } = new List<Message>();
 
-        // test
         public Chat()
         {
 

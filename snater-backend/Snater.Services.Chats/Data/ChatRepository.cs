@@ -35,18 +35,8 @@ namespace Snater.Services.Chats.Data
             return retrievedChat;
         }
 
-        public async Task<Chat> CreateChat(ChatCreateRequest request)
+        public async Task<ChatDTO> CreateChat(ChatCreateRequest request)
         {
-            //Chat chat = new Chat(request.Id, request.Name, request.CreatorId);
-            //ChatUser chatUsers = new ChatUser() { ChatId = chat.Id, UserId = chat.CreatorId };
-
-            //await _chatContext.AddAsync(chat);
-            //await _chatContext.AddAsync(chatUsers);
-            //await _chatContext.SaveChangesAsync();
-
-            //return chat;
-
-
 
             Chat chatToCreate = new Chat(request.Name, request.CreatorId);
 
@@ -59,13 +49,10 @@ namespace Snater.Services.Chats.Data
                 chatUsers.Add(chatUser);
             }
             await _chatContext.AddRangeAsync(chatUsers);
-            //foreach (ChatUser user in chatUsers)
-            //{
-            //    await _chatContext.AddAsync(user);
-            //}
+
             await _chatContext.SaveChangesAsync();
 
-            return chat.Entity;
+            return ChatDTO.MapFromModel(chat.Entity);
         }
 
         public async Task<Message> SendMessage(MessageCreateRequest request)

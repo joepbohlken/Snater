@@ -6,11 +6,11 @@ namespace Snater.Services.Chats.Data.Interfaces
 {
     public interface IChatRepository
     {
-        Task<List<Chat>> GetAllChats(Guid userId);
-        Task<Chat> GetChatById(Guid chatId);
+        Task<List<ChatDTO>> GetAllChats(Guid userId);
+        Task<ChatDTO> GetChatById(Guid chatId);
         Task<ChatDTO> CreateChat(ChatCreateRequest request);
-        Task<Message> SendMessage(MessageCreateRequest request);
-        Task<Message> EditMessage(MessageEditRequest request);
-        Task<Message> DeleteMessage(Guid messageId);
+        Task<MessageDTO> SendMessage(MessageCreateRequest request);
+        Task<MessageDTO> EditMessage(MessageEditRequest request);
+        Task<MessageDTO> DeleteMessage(Guid messageId);
     }
 }

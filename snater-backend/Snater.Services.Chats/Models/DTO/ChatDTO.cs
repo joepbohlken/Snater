@@ -29,5 +29,8 @@
                 model.CreatorId,
                 model.Messages,
                 model.ChatUsers);
+
+        public static List<ChatDTO> MapFromList(List<Chat> list)
+            => list.ConvertAll(x => MapFromModel(x));
     }
 }

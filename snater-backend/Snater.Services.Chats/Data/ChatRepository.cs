@@ -16,30 +16,28 @@ namespace Snater.Services.Chats.Data
         }
 
 
-        public async Task<List<Chat>> GetAllChats(Guid userId)
+        public async Task<List<ChatDTO>> GetAllChats(Guid userId)
         {
             var retrievedChats = await _chatContext.ChatUsers.Include(c => c.Chat).Where(u => u.UserId == userId).ToListAsync();
-
             List<Chat> result = new List<Chat>();
+
             foreach(ChatUser chatUser in retrievedChats)
             {
                 result.Add(chatUser.Chat);
             }
 
-            return result;
+            return ChatDTO.MapFromList(result);
         }
 
-        public async Task<Chat> GetChatById(Guid chatId)
+        public async Task<ChatDTO> GetChatById(Guid chatId)
         {
             var retrievedChat = await _chatContext.Chats.SingleAsync(c => c.Id == chatId);
-            return retrievedChat;
+            return ChatDTO.MapFromModel(retrievedChat);
         }
 
         public async Task<ChatDTO> CreateChat(ChatCreateRequest request)
         {
-
             Chat chatToCreate = new Chat(request.Name, request.CreatorId);
-
             var chat = await _chatContext.AddAsync(chatToCreate);
             List<ChatUser> chatUsers = new List<ChatUser>();
 
@@ -48,36 +46,37 @@ namespace Snater.Services.Chats.Data
                 ChatUser chatUser = new ChatUser(chatToCreate.Id, userId);
                 chatUsers.Add(chatUser);
             }
-            await _chatContext.AddRangeAsync(chatUsers);
 
+            await _chatContext.AddRangeAsync(chatUsers);
             await _chatContext.SaveChangesAsync();
 
             return ChatDTO.MapFromModel(chat.Entity);
         }
 
-        public async Task<Message> SendMessage(MessageCreateRequest request)
+        public async Task<MessageDTO> SendMessage(MessageCreateRequest request)
         {
             Message messageToSend = request.MapToModel();
             var message = await _chatContext.Messages.AddAsync(messageToSend);
             await _chatContext.SaveChangesAsync();
-            return message.Entity;
+
+            return MessageDTO.MapFromModel(message.Entity);
         }
-        public async Task<Message> EditMessage(MessageEditRequest request)
+        public async Task<MessageDTO> EditMessage(MessageEditRequest request)
         {
             Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.Id == request.MessageId);
             retrievedMessage.Content = request.MessageContent;
 
             await _chatContext.SaveChangesAsync();
-            return retrievedMessage;
+            return MessageDTO.MapFromModel(retrievedMessage);
         }
 
-        public async Task<Message> DeleteMessage(Guid messageId)
+        public async Task<MessageDTO> DeleteMessage(Guid messageId)
         {
             Message retrievedMessage = await _chatContext.Messages.SingleAsync(m => m.Id == messageId);
             _chatContext.Remove(retrievedMessage);
             await _chatContext.SaveChangesAsync();
 
-            return retrievedMessage;
+            return MessageDTO.MapFromModel(retrievedMessage);
         }
     }
 }

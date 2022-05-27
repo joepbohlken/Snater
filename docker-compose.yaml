@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  mssql-chatdb:
+  mssql-chatsdb:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: mssql-chatdb
     environment:
@@ -9,5 +9,15 @@ services:
       - SA_PASSWORD=Adminsnater123!
     ports:
       - "1433:1433"
+    volumes:
+      - ~/apps/mssql/data:/var/lib/mssql/data
+  mssql-friendsdb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-friendsdb
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Adminsnater123!
+    ports:
+      - "7600:1433"
     volumes:
       - ~/apps/mssql/data:/var/lib/mssql/data

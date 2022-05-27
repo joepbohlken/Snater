@@ -13,6 +13,7 @@ namespace Snater.Services.Chats.Models
         public List<ChatUser> ChatUsers { get; set; } = new List<ChatUser>();
         public List<Message>? Messages { get; set; } = new List<Message>();
 
+        // test
         public Chat()
         {
 

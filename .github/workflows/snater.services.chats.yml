@@ -38,7 +38,7 @@ jobs:
   # Docker build-push
   chat-build-push:
     uses: "./.github/workflows/microservice-docker-build-push-template.yml"
-    if: github.ref == 'refs/heads/release'
+    # if: github.ref == 'refs/heads/release'
     with:
       project-name: "Snater.Services.Chats"
       project-location: "snater-backend/Snater.Services.Chats"

@@ -26,7 +26,28 @@ spec:
     spec:
       containers:
       - name: chat-service
-        image: joepbohlken/snater.snater.services.chat:release
+        image: joepbohlken/snater-snater.services.chats:development
         imagePullPolicy: Always
+        resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
         ports:
         - containerPort: 80
+
+---
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: chats-service-hpa
+  namespace: default
+spec:
+  maxReplicas: 20
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: chat-service
+  targetCPUUtilizationPercentage: 70

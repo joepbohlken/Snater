@@ -40,7 +40,7 @@ jobs:
     uses: "./.github/workflows/microservice-docker-build-push-template.yml"
     # if: github.ref == 'refs/heads/release'
     with:
-      project-name: "Snater.Services.Chats"
+      project-name: "snater.services.chats"
       project-location: "snater-backend/Snater.Services.Chats"
     secrets:
       docker-token: ${{ secrets.DOCKER_TOKEN}}

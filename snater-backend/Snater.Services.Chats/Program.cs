@@ -2,6 +2,8 @@
 using Snater.Services.Chats.Data;
 using Snater.Services.Chats.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Sinks.Grafana.Loki;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IChatRepository, ChatRepository>();
+
+builder.Host.UseSerilog((ctx, lc) =>
+lc.MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
+.Enrich.FromLogContext()
+.Enrich.WithProperty("Application", ctx.HostingEnvironment.ApplicationName)
+.Enrich.WithProperty("Environment", ctx.HostingEnvironment.EnvironmentName)
+.WriteTo.Console(outputTemplate: "[{Timestamp:dd-MM-yyyy HH:mm:ss}] [{Level}] ({SourceContext}) {Message}{NewLine}{Exception}")
+.WriteTo.GrafanaLoki(ctx.Configuration["Loki:ServerURL"]));
 
 
 var app = builder.Build();
@@ -30,6 +40,8 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<ChatContext>();
     db.Database.Migrate();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

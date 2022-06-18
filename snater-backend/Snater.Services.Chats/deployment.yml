@@ -18,7 +18,7 @@ spec:
   selector:
     matchLabels:
       app: chat-service
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -30,9 +30,9 @@ spec:
         imagePullPolicy: Always
         resources:
             requests:
-              cpu: 250m
+              cpu: "250m"
             limits:
-              cpu: 500m
+              cpu: "500m"
         ports:
         - containerPort: 80
 
@@ -50,4 +50,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: chat-service
-  targetCPUUtilizationPercentage: 70
+  targetCPUUtilizationPercentage: 30

@@ -31,8 +31,10 @@ spec:
         resources:
             requests:
               cpu: "250m"
+              memory: "128Mi"
             limits:
               cpu: "500m"
+              memory: "512Mi"
         ports:
         - containerPort: 80
 
@@ -50,4 +52,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: chat-service
-  targetCPUUtilizationPercentage: 30
+  targetCPUUtilizationPercentage: 60
